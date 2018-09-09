@@ -1,30 +1,36 @@
-var todos = [
-  "clean room",
-  "brush teeth",
-  "exercise",
-  "Study javascript",
-  "eat healthy",  
-];
+// var button = document.getElementsByTagName("button")[0];
 
-var todosLength = todos.length;
+// button.addEventListener("click", function () {
+//   console.log("CLICK!!!")
+// })
 
-// for
+var button = document.getElementById("enter");
+var input = document.getElementById("userinput");
+var ul = document.querySelector("ul");
 
-// for (var i=0; i < todosLength; i++){
-//   todos.pop();
-// } 
+function inputPanjang(){
+  return input.value.length;
+}
 
-// while
+function createListElement(){
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(input.value));
+  ul.appendChild(li);
+  input.value = "";
+}
 
-// var counterOne = 10;
-// while (counterOne > 0) {
-//   console.log(counterOne);
-//   counterOne++
-// }
+function addListAfterClick(){
+  if (inputPanjang() > 0) {
+    createListElement();
+  }
+}
 
-// do
-var counterTwo = 10
-do {
-  console.log(counterTwo);
-  counterTwo--;
-} while (counterTwo > 0);
+function addListAfterKeypress(event){
+  if (inputPanjang() > 0 && event.keyCode === 13) {
+    createListElement();
+  }
+}
+
+button.addEventListener("click", addListAfterClick);
+
+input.addEventListener("keypress", addListAfterKeypress);
