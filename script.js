@@ -1,12 +1,36 @@
-// includes
+// .padStart()
+// .padEnd()
+'Turtle'.padStart(10);
+'Turtle'.padEnd(10);
 
-'hellooo'.includes('o');
-true
+// can give coma at the end
+const fun = (a,b,c,d, ) => {
+	console.log(a);
+}
+fun (1,2,3,4,)
 
-const peliharaan = ['Kucing', 'kuceng', 'cat'];
-peliharaan.includes('kuceng');
-peliharaan.includes('hani cantik');
-true
-false
+Object.values
+Object.entries
+Object.MediaKeySession
 
-const square = (x) => x**2
+let obj = {
+	username0: 'Santa',
+	username1: 'Rudolf',
+	username2: 'Mr thoriq'
+}
+
+Object.keys(obj).forEach((key, index) => {
+	console.log(key, obj[key]);
+})
+
+Object.values (obj).forEach(value => {
+	console.log(value);
+}) 
+
+Object.entries(obj).forEach(value => {
+	console.log(value);
+}) 
+
+Object.entries(obj).map(value => {
+	return value[1] + value[0].replace('username', '');
+}) 
