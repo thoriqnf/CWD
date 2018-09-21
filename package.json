@@ -1,0 +1,21 @@
+{
+  "name": "cwd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoriqnf/CWD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thoriqnf/CWD/issues"
+  },
+  "homepage": "https://github.com/thoriqnf/CWD#readme"
+}
