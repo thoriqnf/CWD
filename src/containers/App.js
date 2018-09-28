@@ -3,7 +3,9 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import '../containers/App.css';
-// import ErrorBoundry from '../components/ErrorBoundryc
+// import ErrorBoundry from '../components/ErrorBoundry
+
+import { searchfield } from '../actions'
 class App extends Component {
   constructor(){
     super()
@@ -14,7 +16,7 @@ class App extends Component {
   
   }
   componentDidMount() {
-    console.log(this.props.store.getState())
+    // console.log(this.props.store.getState());
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => this.setState({ robots: users }));
