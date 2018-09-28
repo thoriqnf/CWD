@@ -6,8 +6,8 @@ const initialState = {
 
 export const searchRobots = (state=initialState, action={}) => {
   switch(action.type) {
-    case: CHANGE_SEARCH_FIELD:
-      return Object.assign({}, state, searchField: action.paylaod );
+    case CHANGE_SEARCH_FIELD:
+      return Object.assign({}, state, {searchField: action.payload} );
       // Bisa gunain object destructuring or object spread operator
       // return {.AudioProcessingEvent..state, searchField: action.payload }
     default:
