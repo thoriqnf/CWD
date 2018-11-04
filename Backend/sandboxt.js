@@ -60,3 +60,32 @@ movePlayer(100, 'Left')
     console.log(data);
   }
 
+  const urls = [
+    'https://jsonplaceholder.typicode.com/users',
+    'https://jsonplaceholder.typicode.com/posts',
+    'https://jsonplaceholder.typicode.com/albums'
+  ]
+
+  // Example 2 using promise map
+  
+  Promise.all(urls.map(url => fetch(url).then(resp => resp.json())
+  )).then(array => {
+    console.log('users', array[0])
+    console.log('posts', array[1])
+    console.log('albums', array[2])
+  }).catch('oops');
+
+  // Example 3 using Async - Await
+
+  const getData = async function() {
+    try {
+      const [users, postz, albumz] = await Promise.all(urls.map(url =>
+        fetch(url).then(resp => resp.json())
+      ))
+      console.log('users', userz)
+      console.log('posts', postz)
+      console.log('albums', albumz)
+    } catch (err){
+      console.log('ops', err)
+    }
+  }
