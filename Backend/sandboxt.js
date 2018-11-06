@@ -75,7 +75,7 @@ movePlayer(100, 'Left')
     console.log('albums', array[2])
   }).catch('oops');
 
-  // Example 3 using Async - Await
+  // Example 2 using Async - Await
 
   const getData = async function() {
     try {
