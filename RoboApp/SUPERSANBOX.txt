@@ -1,5 +1,0 @@
-1. Redux ada 3 action >> reducer >> store >> make changes
-2. connect from redux kena di mapStateToProps dan mapDispatchToProps
-nanti di taroh di export bawah dan buat function sendiri
-3. Kurang kurung bracket {} bisa buat error exportnya bilang mesti ada di top haft
-4. Bisa pake redux logger untuk log semua perubahan state di action
